@@ -49,7 +49,7 @@ API simples em PHP para **listar** e **adicionar** avaliações armazenadas em u
 Atualiza uma avaliação existente pelo ID (passado na URL).
 
 ```
-http://localhost/api/avaliacoes.php?id=1
+"http://localhost/reforco_api/api_para_pi/exercicio_cafe4/api_avaliacoes.php?id=1"
 
 {"avaliacoes": "Marmita chegou quentinha e bem temperada!"}'
 ```
@@ -64,11 +64,14 @@ http://localhost/api/avaliacoes.php?id=1
 ---
 
 ### 🔹 DELETE
+
 Remove uma avaliação específica pelo ID.
 
+```
 
-http://localhost/api/avaliacoes.php?id=3
+"http://localhost/reforco_api/api_para_pi/exercicio_cafe4/api_avaliacoes.php?id=3"
 
+```
 
 **Resposta:**
 ```json
@@ -139,8 +142,11 @@ echo $resultado;
 ## 📁 Estrutura Recomendada
 
 ```
-/api
+/apiexercicio_cafe4
  ├── api_avaliacoes.php
  ├── avaliacoes.json
- └── cliente_POST.php
+ ├── cliente_POST.php
+ ├── cliente_PUT.php
+ └── cliente_DELETE.php
+
 ```
