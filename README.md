@@ -6,11 +6,12 @@ API simples em PHP para **listar** e **adicionar** avaliações armazenadas em u
 
 ## ⚙️ Funcionalidades
 
-| Método           | Descrição                              |
-| **GET**          | Retorna todas as avaliações salvas.    |
-| **POST**         | Adiciona uma ou mais novas avaliações. |
-| **PUT / DELETE** | Reservados (não implementados).        |
-
+| Método           | Descrição                                 |
+| **GET**          | Retorna todas as avaliações salvas.       |
+| **POST**         | Adiciona uma ou mais novas avaliações.    |
+| **PUT**          | Atualiza uma avaliação existente pelo ID. |
+| **DELETE**       | Remove uma avaliação existente pelo ID.   |
+ 
 ---
 
 ## 📂 Estrutura do JSON
@@ -43,6 +44,39 @@ API simples em PHP para **listar** e **adicionar** avaliações armazenadas em u
 ### 🔹 POST
 
     http://localhost/reforco_api/api_para_pi/exercicio_cafe4/cliente_post.php
+
+### 🔹 PUT
+Atualiza uma avaliação existente pelo ID (passado na URL).
+
+```
+http://localhost/api/avaliacoes.php?id=1
+
+{"avaliacoes": "Marmita chegou quentinha e bem temperada!"}'
+```
+
+**Resposta:**
+```json
+{
+  "mensagem": "Avaliação 1 atualizada com sucesso!"
+}
+```
+
+---
+
+### 🔹 DELETE
+Remove uma avaliação específica pelo ID.
+
+
+http://localhost/api/avaliacoes.php?id=3
+
+
+**Resposta:**
+```json
+{
+  "mensagem": "Avaliação 3 removida com sucesso!"
+}
+```
+
 
 **Resposta:**
 ```json
